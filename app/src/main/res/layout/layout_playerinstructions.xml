@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/txtViewPlayerInstr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="INSTRUCTIONS"
+        android:textColor="@color/colorDefaultText"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/lin_row1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtViewPlayerInstr"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Say Hello to Mr. Cat!"
+            android:textSize="23sp"
+            android:textColor="@color/colorDefaultText"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="...but really...say hello"
+            android:textSize="17sp"
+            android:textColor="@color/colorLightText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_row2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_row1"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You need to help him!"
+            android:textSize="23sp"
+            android:textColor="@color/colorDefaultText"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="he needs help…"
+            android:textSize="17sp"
+            android:textColor="@color/colorLightText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_row3"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_row2"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="He’s on a walk"
+            android:textSize="23sp"
+            android:textColor="@color/colorDefaultText"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="He works so hard"
+            android:textSize="17sp"
+            android:textColor="@color/colorLightText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_row4"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_row3"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap to jump over rocks"
+            android:textSize="23sp"
+            android:textColor="@color/colorDefaultText"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rocks are a sensitive subject"
+            android:textSize="17sp"
+            android:textColor="@color/colorLightText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_row5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_row4"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You must prove yourself"
+            android:textSize="23sp"
+            android:textColor="@color/colorDefaultText"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hear him meow"
+            android:textSize="17sp"
+            android:textColor="@color/colorLightText"/>
+
+    </LinearLayout>
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/cat_walk1"
+    android:layout_alignTop="@+id/lin_row5"
+    android:layout_centerHorizontal="true"
+    android:alpha=".2" />
+
+    <Button
+        android:id="@+id/btn_startGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="START"
+        android:textSize="36dp" />
+
+</RelativeLayout>

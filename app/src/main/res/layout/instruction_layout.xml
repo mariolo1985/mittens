@@ -1,27 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="20dp">
+
 
     <TextView
+        android:id="@+id/txtViewInstr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="32dp"
-        android:text="Instruction For Pranksters"
         android:layout_marginTop="10dp"
-        android:textAlignment="center"/>
+        android:text="INSTRUCTIONS"
+        android:textColor="@color/colorDefaultText"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtViewDear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtViewInstr"
+        android:layout_marginTop="5dp"
+        android:text="Dear Prankster"
+        android:textColor="@color/colorDefaultText"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/rel_row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtViewDear"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/txtViewNum1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1."
+            android:textColor="@color/colorDefaultText"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtViewNum1"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/txtViewNum1"
+            android:text="Turn the volume up!"
+            android:textColor="@color/colorDefaultText"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rel_row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_row1"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/txtViewNum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2."
+            android:textColor="@color/colorDefaultText"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtViewNum2"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/txtViewNum2"
+            android:text="Tap ‘GO’ and give the phone to a friend"
+            android:textColor="@color/colorDefaultText"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rel_row3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_row2"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/txtViewNum3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3."
+            android:textColor="@color/colorDefaultText"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtViewNum3"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/txtViewNum3"
+            android:text="They play and get jump scared"
+            android:textColor="@color/colorDefaultText"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rel_row4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_row3"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/txtViewNum4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4."
+            android:textColor="@color/colorDefaultText"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtViewNum4"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/txtViewNum4"
+            android:text="You get a recording of their reaction on your phone!"
+            android:textColor="@color/colorDefaultText"
+            android:textSize="24dp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_initPrank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Initiate Prank"
-        android:textColor="#FFFFFF"
-        android:background="@color/btnPrimaryBg"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="25dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="GO"
+        android:textColor="@color/colorDefaultText"
+        android:textSize="36dp" />
 
 </RelativeLayout>

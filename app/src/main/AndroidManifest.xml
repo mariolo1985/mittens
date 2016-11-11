@@ -22,6 +22,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".PranksterInstructions" android:label="Prankster Instructions"></activity>
+        <activity android:name=".PlayerTitle" android:label="Player Title"></activity>
+        <activity android:name=".PlayerInstructions" android:label="Player Instructions"></activity>
         <activity android:name=".instructions_screen" android:label="Instruction Screen"></activity>
         <activity android:name=".prank" android:label="Prank"></activity>
     </application>
