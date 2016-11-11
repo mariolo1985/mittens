@@ -1,0 +1,29 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/anime_prank_jump"
+    android:oneshot="true">
+    <item
+        android:drawable="@drawable/cat_overrock1"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/cat_overrock2"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/cat_overrock3"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/cat_overrock4"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/cat_overrock5"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/cat_overrock6"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/cat_overrock7"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/cat_overrock8"
+        android:duration="200" />
+
+</animation-list>
