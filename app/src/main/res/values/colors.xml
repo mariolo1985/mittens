@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="btnPrimaryBg">#2974ff</color>
+    <color name="colorBg">#000000</color>
+    <color name="colorSplashText">#ff967c</color>
+    <color name="colorDefaultText">#000000</color>
+    <color name="colorLightText">#7d7d7d</color>
 </resources>
