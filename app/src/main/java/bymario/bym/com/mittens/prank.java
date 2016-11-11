@@ -1,28 +1,32 @@
 package bymario.bym.com.mittens;
 
+import android.graphics.drawable.AnimatedStateListDrawable;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
 public class prank extends AppCompatActivity {
 
     private CameraController _cameraController;
+    private int _prankScreenCount = 0;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.prank_layout);
 
+        /*
         // MANUAL PIC BUTTON
         Button btnManualPic = (Button) findViewById(R.id.btn_manualPic);
         btnManualPic.setOnTouchListener(new View.OnTouchListener() {
@@ -33,50 +37,91 @@ public class prank extends AppCompatActivity {
                 return true;
             }
         });
+*/
+        // LOAD ANIMATION
+        final ImageView img = (ImageView) findViewById(R.id.imgView_prank);
+        img.setBackgroundResource(R.drawable.anime_prank);
+        // START ANIMATION
+        AnimationDrawable animeStartPrank = (AnimationDrawable) img.getBackground();
+        animeStartPrank.start();
 
-        Button btnStartPrank = (Button) findViewById(R.id.btn_startPrank);
-        btnStartPrank.setOnClickListener(new View.OnClickListener() {
+        final RelativeLayout prankLayout = (RelativeLayout) findViewById(R.id.rel_prank);
+        prankLayout.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public void onClick(View v) {
-                View parent = (View) v.getParent();// PARENT VIEW NEEDED (v = btn)
-                v.setVisibility(View.GONE);// HIDE THIS BUTTON
+            public boolean onTouch(View v, MotionEvent event) {
 
-                // LOAD ANIMATION
-                final ImageView img = (ImageView) parent.findViewById(R.id.imgView_prank);
-                img.setBackgroundResource(R.drawable.anime_prank);
-                // START ANIMATION
-                AnimationDrawable animeStartPrank = (AnimationDrawable) img.getBackground();
-                animeStartPrank.start();
+                switch (_prankScreenCount) {
+                    case 0:
 
-                // SHOW HELPER TEXT
-                TextView tvJump = (TextView) parent.findViewById(R.id.txtViewJump);
-                tvJump.setVisibility(View.VISIBLE);
-
-                // SHOW MNAUL PIC BTN
-                final Button btnManualPic = (Button) parent.findViewById(R.id.btn_manualPic);
-                btnManualPic.setVisibility(View.VISIBLE);
-                parent.setOnTouchListener(new View.OnTouchListener() {
-
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        Log.e("MITTENS", "SCREEN TOUCHED");
-                        TextView tvJump = (TextView) v.findViewById(R.id.txtViewJump);
-                        tvJump.setVisibility(View.GONE);
-
-                        btnManualPic.setVisibility(View.GONE);
                         img.setBackgroundResource(R.drawable.anime_prank_2);
 
                         AnimationDrawable animePrank2 = (AnimationDrawable) img.getBackground();
                         animePrank2.start();
 
-                        //takePicture();
-                        // TO DO - REMVE EVENT LISTENER
-                        return true;
-                    }
-                });
-            }// end on click
-        });
-    }
+                        long dur = animePrank2.getNumberOfFrames() * 200;
+                        Handler durHandler = new Handler();
+                        durHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                _prankScreenCount = 1;
+                            }
+                        }, dur);
+
+                        break;
+                    case 1:
+                        img.setBackgroundResource(R.drawable.anime_prank_jump);
+
+                        AnimationDrawable animePrankJump = (AnimationDrawable) img.getBackground();
+                        animePrankJump.start();
+
+                        long dur2 = animePrankJump.getNumberOfFrames() * 200;
+                        Handler durHandler2 = new Handler();
+                        durHandler2.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                img.setBackgroundResource(R.drawable.anime_prank_2);
+                                AnimationDrawable animePrankWalk = (AnimationDrawable) img.getBackground();
+                                animePrankWalk.start();
+                                _prankScreenCount = 2;
+                            }
+                        }, dur2);
+
+                        break;
+
+                    case 2:
+                        img.setBackgroundResource(R.drawable.anime_prank_jump);
+
+                        AnimationDrawable animePrankJump2 = (AnimationDrawable) img.getBackground();
+                        animePrankJump2.start();
+
+                        long dur3 = animePrankJump2.getNumberOfFrames() * 200;
+                        Handler durHandler3 = new Handler();
+                        durHandler3.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                //img.setBackground(getResources().getDrawable(R.drawable.scare));
+                                //prankLayout.setBackgroundColor(getResources().getColor(R.color.colorBg));
+                            }
+                        }, dur3);
+                        break;
+
+                    case 3:
+
+                        break;
+
+                    default:
+                        break;
+                }
+
+                //takePicture();
+                // TO DO - REMVE EVENT LISTENER
+
+                return true;
+            }
+        });// end on touch listner
+    }// end on create
+
 
     @Override
     protected void onStart() {

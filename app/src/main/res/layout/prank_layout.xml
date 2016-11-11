@@ -1,47 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_prank"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <Button
-        android:id="@+id/btn_startPrank"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Begin"
-        android:background="@color/btnPrimaryBg"
-        android:textColor="#FFFFFF"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"/>
 
     <ImageView
         android:id="@+id/imgView_prank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_startPrank"
         android:adjustViewBounds="true"
         android:layout_centerInParent="true"/>
-
-    <TextView
-        android:id="@+id/txtViewJump"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Help Mittens across the backyard to get to Thanksgiving dinner..."
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="25dp"
-        android:textColor="#717171"
-        android:visibility="gone"/>
-
-    <Button
-        android:id="@+id/btn_manualPic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Manual Pic"
-        android:visibility="gone"
-        />
 
 </RelativeLayout>
