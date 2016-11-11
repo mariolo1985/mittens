@@ -13,19 +13,12 @@ public class launch extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
 
-        // set splash
-        ImageView imgViewSplash = (ImageView) findViewById(R.id.imgV_splash);
-        imgViewSplash.setBackgroundResource(R.drawable.anime_splash);
-        // ANIMATE SPLASH
-        AnimationDrawable splashDrawable = (AnimationDrawable) imgViewSplash.getBackground();
-        splashDrawable.start();
-
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     @Override
                     public void run() {
-                        Intent instrScreen = new Intent(launch.this, instructions_screen.class);
+                        Intent instrScreen = new Intent(launch.this, PranksterInstructions.class);
                         startActivity(instrScreen);
                     }
                 }
