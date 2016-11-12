@@ -26,21 +26,9 @@ public class prank extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prank_layout);
 
-        /*
-        // MANUAL PIC BUTTON
-        Button btnManualPic = (Button) findViewById(R.id.btn_manualPic);
-        btnManualPic.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                takePicture();
-                v.setVisibility(View.GONE);
-                return true;
-            }
-        });
-*/
         // LOAD ANIMATION
         final ImageView img = (ImageView) findViewById(R.id.imgView_prank);
-        img.setBackgroundResource(R.drawable.anime_prank);
+        img.setBackgroundResource(R.drawable.anime_prank_2);
         // START ANIMATION
         AnimationDrawable animeStartPrank = (AnimationDrawable) img.getBackground();
         animeStartPrank.start();
@@ -54,7 +42,7 @@ public class prank extends AppCompatActivity {
                 switch (_prankScreenCount) {
                     case 0:
 
-                        img.setBackgroundResource(R.drawable.anime_prank_2);
+                        img.setBackgroundResource(R.drawable.anime_prank_jump);
 
                         AnimationDrawable animePrank2 = (AnimationDrawable) img.getBackground();
                         animePrank2.start();
@@ -64,6 +52,9 @@ public class prank extends AppCompatActivity {
                         durHandler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
+                                img.setBackgroundResource(R.drawable.anime_prank_2);
+                                AnimationDrawable animePrankJump = (AnimationDrawable) img.getBackground();
+                                animePrankJump.start();
                                 _prankScreenCount = 1;
                             }
                         }, dur);
@@ -101,7 +92,8 @@ public class prank extends AppCompatActivity {
                             @Override
                             public void run() {
                                 //img.setBackground(getResources().getDrawable(R.drawable.scare));
-                                //prankLayout.setBackgroundColor(getResources().getColor(R.color.colorBg));
+                                prankLayout.setBackgroundColor(getResources().getColor(R.color.colorBg));
+                                _prankScreenCount = 3;
                             }
                         }, dur3);
                         break;
