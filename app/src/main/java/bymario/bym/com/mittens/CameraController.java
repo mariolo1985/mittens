@@ -104,6 +104,7 @@ public class CameraController {
 
         Camera.Parameters params = camera.getParameters();
         params.setJpegQuality(100);
+        params.setRotation(270);
 
         camera.setParameters(params);
     }

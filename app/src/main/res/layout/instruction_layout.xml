@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
@@ -7,7 +8,7 @@
     android:padding="20dp">
 
 
-    <TextView
+    <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/txtViewInstr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,9 +16,11 @@
         android:text="INSTRUCTIONS"
         android:textColor="@color/colorDefaultText"
         android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        foo:customFont="AmericanTypewriterRegular.ttf"
+        />
 
-    <TextView
+    <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/txtViewDear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +30,8 @@
         android:text="Dear Prankster"
         android:textColor="@color/colorDefaultText"
         android:textSize="17dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        foo:customFont="AmericanTypewriterRegular.ttf"/>
 
     <LinearLayout
         android:id="@+id/rel_row1"
@@ -36,16 +40,17 @@
         android:layout_below="@+id/txtViewDear"
         android:layout_marginTop="40dp">
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/txtViewNum1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1."
             android:textColor="@color/colorDefaultText"
             android:textSize="24dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/txtViewNum1"
@@ -53,7 +58,8 @@
             android:layout_toEndOf="@+id/txtViewNum1"
             android:text="Turn the volume up!"
             android:textColor="@color/colorDefaultText"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
     </LinearLayout>
 
@@ -65,16 +71,17 @@
         android:layout_below="@+id/rel_row1"
         android:layout_marginTop="30dp">
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/txtViewNum2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2."
             android:textColor="@color/colorDefaultText"
             android:textSize="24dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/txtViewNum2"
@@ -82,7 +89,8 @@
             android:layout_toEndOf="@+id/txtViewNum2"
             android:text="Tap ‘GO’ and give the phone to a friend"
             android:textColor="@color/colorDefaultText"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
     </LinearLayout>
 
@@ -94,16 +102,17 @@
         android:layout_below="@+id/rel_row2"
         android:layout_marginTop="30dp">
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/txtViewNum3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3."
             android:textColor="@color/colorDefaultText"
             android:textSize="24dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/txtViewNum3"
@@ -111,7 +120,8 @@
             android:layout_toEndOf="@+id/txtViewNum3"
             android:text="They play and get jump scared"
             android:textColor="@color/colorDefaultText"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
     </LinearLayout>
 
@@ -122,16 +132,17 @@
         android:layout_below="@+id/rel_row3"
         android:layout_marginTop="30dp">
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/txtViewNum4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4."
             android:textColor="@color/colorDefaultText"
             android:textSize="24dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/txtViewNum4"
@@ -139,7 +150,8 @@
             android:layout_toEndOf="@+id/txtViewNum4"
             android:text="You get a recording of their reaction on your phone!"
             android:textColor="@color/colorDefaultText"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
     </LinearLayout>
 
     <Button

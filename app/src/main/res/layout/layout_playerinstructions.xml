@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp">
 
-    <TextView
+    <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/txtViewPlayerInstr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +14,8 @@
         android:text="INSTRUCTIONS"
         android:textColor="@color/colorDefaultText"
         android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        foo:customFont="AmericanTypewriterRegular.ttf"/>
 
     <LinearLayout
         android:id="@+id/lin_row1"
@@ -23,19 +25,21 @@
         android:layout_below="@+id/txtViewPlayerInstr"
         android:layout_marginTop="20dp">
 
-
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Say Hello to Mr. Cat!"
             android:textSize="23sp"
-            android:textColor="@color/colorDefaultText"/>
-        <TextView
+            android:textColor="@color/colorDefaultText"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
+
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="...but really...say hello"
             android:textSize="17sp"
-            android:textColor="@color/colorLightText"/>
+            android:textColor="@color/colorLightText"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
     </LinearLayout>
 
@@ -47,18 +51,21 @@
         android:layout_below="@+id/lin_row1"
         android:layout_marginTop="20dp">
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="You need to help him!"
             android:textSize="23sp"
-            android:textColor="@color/colorDefaultText"/>
-        <TextView
+            android:textColor="@color/colorDefaultText"
+            foo:customFont="AmericanTypewriterRegular.ttf"
+            />
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="he needs help…"
             android:textSize="17sp"
-            android:textColor="@color/colorLightText"/>
+            android:textColor="@color/colorLightText"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
     </LinearLayout>
 
@@ -70,18 +77,20 @@
         android:layout_below="@+id/lin_row2"
         android:layout_marginTop="20dp">
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="He’s on a walk"
             android:textSize="23sp"
-            android:textColor="@color/colorDefaultText"/>
-        <TextView
+            android:textColor="@color/colorDefaultText"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="He works so hard"
             android:textSize="17sp"
-            android:textColor="@color/colorLightText"/>
+            android:textColor="@color/colorLightText"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
     </LinearLayout>
 
@@ -93,18 +102,20 @@
         android:layout_below="@+id/lin_row3"
         android:layout_marginTop="20dp">
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tap to jump over rocks"
             android:textSize="23sp"
-            android:textColor="@color/colorDefaultText"/>
-        <TextView
+            android:textColor="@color/colorDefaultText"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rocks are a sensitive subject"
             android:textSize="17sp"
-            android:textColor="@color/colorLightText"/>
+            android:textColor="@color/colorLightText"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
     </LinearLayout>
 
@@ -116,18 +127,20 @@
         android:layout_below="@+id/lin_row4"
         android:layout_marginTop="20dp">
 
-        <TextView
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="You must prove yourself"
             android:textSize="23sp"
-            android:textColor="@color/colorDefaultText"/>
-        <TextView
+            android:textColor="@color/colorDefaultText"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
+        <bymario.bym.com.mittens.TextViewPlus xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hear him meow"
             android:textSize="17sp"
-            android:textColor="@color/colorLightText"/>
+            android:textColor="@color/colorLightText"
+            foo:customFont="AmericanTypewriterRegular.ttf"/>
 
     </LinearLayout>
 

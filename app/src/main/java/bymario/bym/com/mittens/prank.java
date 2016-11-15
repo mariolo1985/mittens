@@ -1,18 +1,16 @@
 package bymario.bym.com.mittens;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimatedStateListDrawable;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 
 public class prank extends AppCompatActivity {
@@ -26,6 +24,10 @@ public class prank extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prank_layout);
 
+        final Intent gameMusicService = new Intent(this, GameMusicService.class);
+        final Intent scareMusicService = new Intent(this, ScareMusicService.class);
+        final Intent PlayerScared = new Intent(this, PlayerScared.class);
+
         // LOAD ANIMATION
         final ImageView img = (ImageView) findViewById(R.id.imgView_prank);
         img.setBackgroundResource(R.drawable.anime_prank_2);
@@ -34,11 +36,9 @@ public class prank extends AppCompatActivity {
         animeStartPrank.start();
 
         final RelativeLayout prankLayout = (RelativeLayout) findViewById(R.id.rel_prank);
-        prankLayout.setOnTouchListener(new View.OnTouchListener() {
-
+        prankLayout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
+            public void onClick(View v) {
                 switch (_prankScreenCount) {
                     case 0:
 
@@ -47,7 +47,7 @@ public class prank extends AppCompatActivity {
                         AnimationDrawable animePrank2 = (AnimationDrawable) img.getBackground();
                         animePrank2.start();
 
-                        long dur = animePrank2.getNumberOfFrames() * 200;
+                        long dur = animePrank2.getNumberOfFrames() * 100;
                         Handler durHandler = new Handler();
                         durHandler.postDelayed(new Runnable() {
                             @Override
@@ -66,7 +66,7 @@ public class prank extends AppCompatActivity {
                         AnimationDrawable animePrankJump = (AnimationDrawable) img.getBackground();
                         animePrankJump.start();
 
-                        long dur2 = animePrankJump.getNumberOfFrames() * 200;
+                        long dur2 = animePrankJump.getNumberOfFrames() * 100;
                         Handler durHandler2 = new Handler();
                         durHandler2.postDelayed(new Runnable() {
                             @Override
@@ -86,32 +86,32 @@ public class prank extends AppCompatActivity {
                         AnimationDrawable animePrankJump2 = (AnimationDrawable) img.getBackground();
                         animePrankJump2.start();
 
-                        long dur3 = animePrankJump2.getNumberOfFrames() * 200;
+                        long dur3 = animePrankJump2.getNumberOfFrames() * 100;
                         Handler durHandler3 = new Handler();
                         durHandler3.postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                //img.setBackground(getResources().getDrawable(R.drawable.scare));
+                                stopService(gameMusicService);
+                                startService(scareMusicService);
+
+                                img.setImageResource(R.drawable.scare);
                                 prankLayout.setBackgroundColor(getResources().getColor(R.color.colorBg));
+                                takePicture();
                                 _prankScreenCount = 3;
                             }
-                        }, dur3);
+                        }, dur3 - 100);
                         break;
 
                     case 3:
-
+                        startActivity(PlayerScared);
                         break;
 
                     default:
                         break;
-                }
-
-                //takePicture();
-                // TO DO - REMVE EVENT LISTENER
-
-                return true;
+                }// end switch
             }
-        });// end on touch listner
+        });
+
     }// end on create
 
 
@@ -125,23 +125,33 @@ public class prank extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         _cameraController.releaseCamera();
+        stopAllAudioService();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         _cameraController.releaseCamera();
+        stopAllAudioService();
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         this.finishAffinity();// end on backpress
+        stopAllAudioService();
     }
 
     // CAMERA HELPERS
     public void takePicture() {
         _cameraController.getCameraInstance();
         _cameraController.takePicture();
+    }
+
+    public void stopAllAudioService() {
+        Intent gameMusicService = new Intent(this, GameMusicService.class);
+        Intent scareMusicService = new Intent(this, ScareMusicService.class);
+        stopService(gameMusicService);
+        stopService(scareMusicService);
     }
 }

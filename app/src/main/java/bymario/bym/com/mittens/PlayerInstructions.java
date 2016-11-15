@@ -14,6 +14,11 @@ public class PlayerInstructions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_playerinstructions);
 
+        // START GAME MUSIC
+        Intent gameMusicService = new Intent(this,GameMusicService.class);
+        startService(gameMusicService);
+
+
         Button btnPlay = (Button) findViewById(R.id.btn_startGame);
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
