@@ -3,50 +3,50 @@
     android:oneshot="true">
     <item
         android:drawable="@drawable/cat_rock1"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock2"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock3"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock4"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock5"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock6"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock7"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock8"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock9"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock10"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock11"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock12"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock13"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock14"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock15"
-        android:duration="200" />
+        android:duration="100" />
     <item
         android:drawable="@drawable/cat_rock16"
-        android:duration="200" />
+        android:duration="100" />
 </animation-list>
